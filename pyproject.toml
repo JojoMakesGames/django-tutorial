@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "django-tutorial"
+version = "0.1.0"
+description = "Django tutorial app"
+authors = ["JojoMakesGames <jojo.oatey@gmail.com>"]
+readme = "README.md"
+packages = [{include = "django_tutorial"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^4.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
