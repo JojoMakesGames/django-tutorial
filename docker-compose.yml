@@ -11,6 +11,27 @@ services:
     expose:
       - 5432:5432
 
+  prometheus: 
+    image: prom/prometheus
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+    ports:
+      - 9090:9090
+    depends_on:
+      - django
+      
+  django: 
+    build: .
+    command: poetry run python manage.py runserver
+    volumes:
+      - .:/app
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+
   # web:
   #   build: .
   #   command: python manage.py runserver 0.0.0.0:8000

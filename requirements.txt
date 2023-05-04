@@ -1,0 +1,6 @@
+#requirement.txt
+
+# Install the requirements
+django >= "4.2"
+psycopg2 >= "2.9.6"
+django-prometheus >= "2.3.1"
