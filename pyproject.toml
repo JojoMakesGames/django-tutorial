@@ -9,7 +9,7 @@ readme = "README.md"
 python = "^3.11"
 django = "^4.2"
 psycopg2 = "^2.9.6"
-django-prometheus = "^2.3.1"
+django-prometheus = "^2.2.0"
 
 
 [build-system]
